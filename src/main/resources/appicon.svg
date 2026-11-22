@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- background tile -->
+  <rect x="8" y="8" width="240" height="240" rx="44" ry="44" fill="#f3ead3" stroke="#6b4f2a" stroke-width="6"/>
+  <!-- trunk and branches -->
+  <path d="M116 226 C120 190 122 168 120 142 C106 130 92 122 74 118 L78 108 C96 112 110 120 122 128
+           C122 112 120 98 112 84 L122 78 C130 92 134 108 134 124 C146 114 160 106 180 102 L184 112
+           C166 116 152 124 138 138 C138 166 140 192 148 226 Z" fill="#7a5230"/>
+  <!-- crown: leaves as overlapping circles -->
+  <circle cx="128" cy="64" r="30" fill="#3f8f3f"/>
+  <circle cx="92" cy="88" r="26" fill="#4ca24c"/>
+  <circle cx="164" cy="88" r="26" fill="#4ca24c"/>
+  <circle cx="68" cy="116" r="20" fill="#3f8f3f"/>
+  <circle cx="188" cy="116" r="20" fill="#3f8f3f"/>
+  <circle cx="128" cy="96" r="24" fill="#5ab65a"/>
+  <!-- "family" portraits: three small medallions on the branches -->
+  <circle cx="74" cy="118" r="9" fill="#f3ead3" stroke="#6b4f2a" stroke-width="3"/>
+  <circle cx="182" cy="108" r="9" fill="#f3ead3" stroke="#6b4f2a" stroke-width="3"/>
+  <circle cx="128" cy="60" r="9" fill="#f3ead3" stroke="#6b4f2a" stroke-width="3"/>
+  <!-- ground -->
+  <path d="M70 226 H186" stroke="#6b4f2a" stroke-width="8" stroke-linecap="round"/>
+</svg>

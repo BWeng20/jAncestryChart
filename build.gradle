@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'io.github.bweng20'
+version = '1.0.0-SNAPSHOT'
+description = 'Reads GEDCOM 7 files and draws an organic-looking ancestry charts.'
+
+def mainClassName = 'org.jAncestryChart.App'
+def junitVersion = '5.13.4'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.github.bweng20:jSVGIcon:1.7'
+    testImplementation platform("org.junit:junit-bom:${junitVersion}")
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+java {
+    modularity.inferModulePath = true
+}
+
+application {
+    mainClass = mainClassName
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+    options.compilerArgs << '-Xlint:all'
+}
+
+tasks.withType(Javadoc).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+    jvmArgs '-Djava.awt.headless=true'
+}
+
+tasks.named('jar') {
+    archiveFileName = 'jAncestryChart.jar'
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
